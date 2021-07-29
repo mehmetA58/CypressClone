@@ -28,3 +28,5 @@ describe("Login", () => {
     cy.get(".btn").click();
   });
 });
+
+//hem negatif hem pozitif test icin kullanacagimiz icin degiskenler method disinda tanimlanir

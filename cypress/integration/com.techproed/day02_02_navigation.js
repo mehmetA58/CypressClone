@@ -32,7 +32,7 @@ describe("Navigation", () => {
     cy.visit("https://qa-environment.koalaresorthotels.com/");
 
     cy.contains("Log in").click().go("back").go("forward").go("back");
-
+    cy.pause(); //testi durdurur browser da acilan sayfada play tusu aktif olur
     cy.reload(true).contains("Log in").should("be.visible");
 
     //reload(true) :tekrar yukle ------reload(false) :tekrar yukleme
