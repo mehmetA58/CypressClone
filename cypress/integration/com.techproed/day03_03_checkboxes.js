@@ -1,6 +1,6 @@
 describe("checkboxes", () => {
   it.skip("checking single box", () => {
-    //skip : bu testi calistirmadan gec/atla
+    //it.skip : bu testi calistirmadan gec/atla
     cy.visit("http://automationpractice.com/index.php");
     cy.get(".sf-with-ul").first().click(); //Tops Webelementi  locator uzun oldugu icin ilkini tikla
 
@@ -24,7 +24,7 @@ describe("checkboxes", () => {
   });
 
   it.skip("check all checkboxes", () => {
-    //only : skip yerine only olursa sadece bu testi calistir demektir
+    //it.only : skip yerine only olursa sadece bu testi calistir demektir
     cy.visit("http://automationpractice.com/index.php");
     cy.get(".sf-with-ul").first().click(); //Tops Webelementi
 
@@ -45,8 +45,18 @@ describe("checkboxes", () => {
     //*click() -> tek elemente uygulanir
     //*click({ multiple: true }) -> birden fazla elemete uygulamak icin kullanilir
 
-    cy.get("input[type='checkbox']").should("be.checked"); //assertion
+    //??Assertion
+    //*1) secilen locator tiklanmis(checked) mi
+    cy.get("input[type='checkbox']").first().should("be.checked"); //assertion
 
-    
+    //*2) ust Classta parent checked oldu mu
+    cy.get("input[type='checkbox']")
+      .first()
+      .parent()
+      .should("have.class", "checked");
+      //should('have.class','container');
+
+    //*3) should('have.id','username');
+    //*4) should('have.type','text');
   });
 });
