@@ -23,3 +23,34 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+//?? ************REUSABLE METHODS****************
+//!KENDIMIZIN OLUSTURDUGU METHODALARDIR,BURADA YAZİLAN KODLAR FRAMEWORK UN HER YERİNDEN ULASILABILIR OLUR
+
+//* Cypress.Commands.add() -> komut ekle-tanimla
+
+//??automationpractice -> giris icin tanimlandi 
+
+Cypress.Commands.add('login', (email,password) => {
+cy.visit("http://automationpractice.com/index.php");
+cy.get('.login').click();
+cy.get('#email').type(email)
+cy.get('#passwd').type(password)
+cy.get("#SubmitLogin > span").click();
+
+})
+
+//??amazon arama  -> girilen urun icin arama yapilacak
+Cypress.Commands.add("amazonSearch", (productName) => {
+ cy.visit("https://www.amazon.com/");
+ cy.get("#twotabsearchtextbox").type(productName)
+ cy.get("#nav-search-submit-button").click()
+});
+
+//*==========cypress te dosya yukleme====================
+//https://www.npmjs.com/package/cypress-file-upload
+//npm install --save-dev cypress-file-upload
+import "cypress-file-upload";
+
+//============================================================
+//automationpractice.comautomationpractice.com
