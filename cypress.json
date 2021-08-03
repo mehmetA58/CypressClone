@@ -1,1 +1,5 @@
-{}
+{
+  "chromeWebSecurity": false,
+  "firefoxWebSecurity": false,
+  "projectId": "fo5tgr"
+}

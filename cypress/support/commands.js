@@ -53,4 +53,4 @@ Cypress.Commands.add("amazonSearch", (productName) => {
 import "cypress-file-upload";
 
 //============================================================
-//automationpractice.comautomationpractice.com
+
