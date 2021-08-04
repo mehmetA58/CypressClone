@@ -1,0 +1,126 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-04T18:14:59.798Z",
+    "end": "2021-08-04T18:15:11.699Z",
+    "duration": 11901,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6143f77e-7f31-4599-a581-7276b98c81f6",
+      "title": "",
+      "fullFile": "cypress/integration/com.techproed/day04_03_multipleWindow.js",
+      "file": "cypress/integration/com.techproed/day04_03_multipleWindow.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "010a73b2-23aa-4d03-a10d-9da28548809b",
+          "title": "multiple windows",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "removing target",
+              "fullTitle": "multiple windows removing target",
+              "timedOut": null,
+              "duration": 5228,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://the-internet.herokuapp.com/windows\");\ncy.wait(3000);\ncy.get(\".example > a\").invoke(\"removeAttr\", \"target\").click(); //hedefi yani olan sekmeyi kaldirarak cagir  (yeni sekmeyi cagir)\n//*invoke('removeAttr', 'Attribute name')\n//*attribute siliyor, yeni sekmeyi acmiyor, tiklandiginda ayni sekmede aciliyor\ncy.get(\"h3\").should(\"have.text\", \"New Window\");",
+              "err": {},
+              "uuid": "a6e00cbf-8940-4079-a232-17631afba52c",
+              "parentUUID": "010a73b2-23aa-4d03-a10d-9da28548809b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "yeni urlde acma",
+              "fullTitle": "multiple windows yeni urlde acma",
+              "timedOut": null,
+              "duration": 4604,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://the-internet.herokuapp.com/windows\");\ncy.wait(3000); //  prop() : JQuery de bir method, Attribute degerini aliyor\n//  prop() ile 'href' degerini aldik (deger : Window/new)\ncy.get(\".example > a\").then(element => {\n  const newURL = element.prop(\"href\");\n  cy.visit(newURL);\n});\ncy.get(\"h3\").should(\"have.text\", \"New Window\"); //testin icinde methodun disinda",
+              "err": {},
+              "uuid": "f9a2880a-a064-464d-827e-364f6708bfa4",
+              "parentUUID": "010a73b2-23aa-4d03-a10d-9da28548809b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a6e00cbf-8940-4079-a232-17631afba52c",
+            "f9a2880a-a064-464d-827e-364f6708bfa4"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9832,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

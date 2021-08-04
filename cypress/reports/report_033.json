@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-04T18:15:13.772Z",
+    "end": "2021-08-04T18:15:17.981Z",
+    "duration": 4209,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "760c467c-eec8-40fd-abb1-d001a0ba3dc9",
+      "title": "",
+      "fullFile": "cypress/integration/com.techproed/day04_04_draganddrop.js",
+      "file": "cypress/integration/com.techproed/day04_04_draganddrop.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e4d8a3f8-27ee-46f5-bb05-232888b8898f",
+          "title": "drag and drop",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "double click",
+              "fullTitle": "drag and drop double click",
+              "timedOut": null,
+              "duration": 1705,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://www.testandquiz.com/selenium/testing.html\"); //* cift tiklama\ncy.get(\"#dblClkBtn\").dblclick(); //*sag tiklama\ncy.get(\"#dblClkBtn\").rightclick();\ncy.on(\"window:alert\", str => {\n  //??Assertion\n  //*1.yol\n  expect(str).to.equal(\"hi, JavaTpoint Testing\"); //*2.yol\n  expect(str).to.eq(\"hi, JavaTpoint Testing\"); //*3.yol\n  expect(str).to.contains(\"hi, JavaTpoint Testing\");\n});\nit(\"drag and drop\", () => {\n  // 1) Terminalden: npm install --save-dev @4tw/cypress-drag-drop\n  // 2) import '@4tw/cypress-drag-drop'\n  cy.visit(\"https://www.testandquiz.com/selenium/testing.html\");\n  cy.get(\"#sourceImage\") // suruklenecek element\n  .drag(\"#targetDiv\"); //suruklenecegi yer\n});",
+              "err": {},
+              "uuid": "ae09acd5-7154-44c1-b5ee-c3d178229218",
+              "parentUUID": "e4d8a3f8-27ee-46f5-bb05-232888b8898f",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ae09acd5-7154-44c1-b5ee-c3d178229218"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 1705,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

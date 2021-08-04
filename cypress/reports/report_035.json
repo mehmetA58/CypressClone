@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-04T18:15:35.259Z",
+    "end": "2021-08-04T18:15:47.272Z",
+    "duration": 12013,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "bcf2bf31-b2b4-45c8-9138-c01bbfbfacc1",
+      "title": "",
+      "fullFile": "cypress/integration/com.techproed/day05_02_amazonSearch.js",
+      "file": "cypress/integration/com.techproed/day05_02_amazonSearch.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "81700f28-b3be-4efc-a86e-054a07169528",
+          "title": "search",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "amazon search",
+              "fullTitle": "search amazon search",
+              "timedOut": null,
+              "duration": 9527,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// cy.amazonSearch(\"imac\");\ncy.amazonSearch(\"iphone\"); // cy.get(\".a-section > .a-color-state\").should(\"have.text\", '\"imac\"');\ncy.get(\".a-section > .a-color-state\").should(\"include.text\", \"iphone\");",
+              "err": {},
+              "uuid": "7f277842-1bbf-4d7b-9e5f-5a0780d4bc76",
+              "parentUUID": "81700f28-b3be-4efc-a86e-054a07169528",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7f277842-1bbf-4d7b-9e5f-5a0780d4bc76"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9527,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
