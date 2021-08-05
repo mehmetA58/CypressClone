@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-05T19:11:24.552Z",
+    "end": "2021-08-05T19:11:31.432Z",
+    "duration": 6880,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2c7049cb-1c57-4a18-8997-4f3b27035b61",
+      "title": "",
+      "fullFile": "cypress/integration/com.techproed/day02_03_dropdown.js",
+      "file": "cypress/integration/com.techproed/day02_03_dropdown.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "4f7f05e8-1879-4478-aa13-12dce323e0dc",
+          "title": "dropdown",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "dropdown test",
+              "fullTitle": "dropdown dropdown test",
+              "timedOut": null,
+              "duration": 4198,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://the-internet.herokuapp.com/dropdown\"); //*select option 1\ncy.get(\"#dropdown\").select(\"Option 1\").should(\"have.value\", \"1\"); // cy.get(\"#dropdown\").select(\"1\");  bu sekilde de oluyor\n//*select option 2\ncy.get(\"#dropdown\").select(\"Option 2\").should(\"have.value\", \"2\"); //cy.get(\"#dropdown\").select(\"2\");",
+              "err": {},
+              "uuid": "66e1eb40-cd2a-4f69-a55a-a167c1fe1f17",
+              "parentUUID": "4f7f05e8-1879-4478-aa13-12dce323e0dc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "66e1eb40-cd2a-4f69-a55a-a167c1fe1f17"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4198,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

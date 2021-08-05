@@ -1,0 +1,127 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 1,
+    "failures": -1,
+    "start": "2021-08-05T18:47:20.609Z",
+    "end": "2021-08-05T18:48:07.191Z",
+    "duration": 46582,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 50,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 1,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "edd68793-0fec-4d08-b6df-8ef4e28bb66f",
+      "title": "",
+      "fullFile": "cypress/integration/com.techproed/day05_01_customMethods.js",
+      "file": "cypress/integration/com.techproed/day05_01_customMethods.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "324c78df-def9-479f-b562-91af276b741b",
+          "title": "custom method",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "login",
+              "fullTitle": "custom method login",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "bb04d9b0-2f20-46ff-9843-48fca77dc7e8",
+              "parentUUID": "324c78df-def9-479f-b562-91af276b741b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "negative Login",
+              "fullTitle": "custom method negative Login",
+              "timedOut": null,
+              "duration": 36057,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.login(\"123murat12@gmail.com\", \"123murat123\"); //Assertion\n//1\ncy.contains(\"Authentication failed\").should(\"be.visible\"); //2\n//url :http://automationpractice.com/index.php?controller=authentication\ncy.url().should(\"include\", \"controller=authentication\"); //3\ncy.screenshot(); //framework de screenshot klasorune gider",
+              "err": {},
+              "uuid": "efc39536-883c-4c6d-858d-07bb765779f0",
+              "parentUUID": "324c78df-def9-479f-b562-91af276b741b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "efc39536-883c-4c6d-858d-07bb765779f0"
+          ],
+          "failures": [],
+          "pending": [
+            "bb04d9b0-2f20-46ff-9843-48fca77dc7e8"
+          ],
+          "skipped": [],
+          "duration": 36057,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

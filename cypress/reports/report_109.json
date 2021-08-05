@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-05T19:12:56.960Z",
+    "end": "2021-08-05T19:13:03.403Z",
+    "duration": 6443,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "65fa441a-31f9-4ba8-abaf-cce09e328acc",
+      "title": "",
+      "fullFile": "cypress/integration/com.techproed/day04_02_iframe.js",
+      "file": "cypress/integration/com.techproed/day04_02_iframe.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fc609489-26c8-4bea-906f-c0643b0308c7",
+          "title": "iframe",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "iframe test",
+              "fullTitle": "iframe iframe test",
+              "timedOut": null,
+              "duration": 5070,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://the-internet.herokuapp.com/iframe\");\ncy.get(\"h3\").should(\"contain\", \"Editor\");\ncy.frameLoaded(\"#mce_0_ifr\"); //**frameLoaded(\"cssSelector\"); iframe in yerini tanimliyoruz, iframe i yukle\n//driver.switchTo().frame(locator); //selenyum da\ncy.iframe().find(\"p\").clear(); //* iframe() : iframe e git, find(\"p\") : find ile p tag ini bul, clear() : temizle\ncy.iframe().find(\"p\").type(\"Hello World Hi Ahmet\");\ncy.get(\".large-4 > div > a\").should(\"contain.text\", \"Elemental Selenium\").click(); //diger sayfaya geciyor cypress runner disina cikiyor - \n//***dezavantaj : Cypess runner tek sekmede calisir",
+              "err": {},
+              "uuid": "66f22240-5e6a-4903-9244-4b15ff8953b0",
+              "parentUUID": "fc609489-26c8-4bea-906f-c0643b0308c7",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "66f22240-5e6a-4903-9244-4b15ff8953b0"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5070,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

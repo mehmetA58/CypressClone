@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-05T18:46:44.289Z",
+    "end": "2021-08-05T18:46:50.427Z",
+    "duration": 6138,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "17a19eee-3c00-4caa-a3a5-ac5770a3710a",
+      "title": "",
+      "fullFile": "cypress/integration/com.techproed/day04_01_alerts.js",
+      "file": "cypress/integration/com.techproed/day04_01_alerts.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "acc0fac7-fd01-477f-8b58-402e2456b32b",
+          "title": "alerts",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "dismiss alert test",
+              "fullTitle": "alerts dismiss alert test",
+              "timedOut": null,
+              "duration": 3537,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://the-internet.herokuapp.com/javascript_alerts\");\ncy.get(\":nth-child(2) > button\").click(); //cypres otomatik olarak tamam butonuna tikladi\n//ama iptal butonunu secmek istiyoruz\n//browser controlu icin on() funksiyonu kullanacagiz\n//on()-> jquery bir fonksiyondur\n//window(object):confirm(functionality)\ncy.on(\"window:confirm\", str => {\n  return false; //return true -> default olarak tamam tikla demek\n});\ncy.get(\"#result\").should(\"have.text\", \"You clicked: Cancel\");",
+              "err": {},
+              "uuid": "ad485855-6693-47d8-bf65-1317108ddffc",
+              "parentUUID": "acc0fac7-fd01-477f-8b58-402e2456b32b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ad485855-6693-47d8-bf65-1317108ddffc"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3537,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

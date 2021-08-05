@@ -1,0 +1,145 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-05T18:48:33.494Z",
+    "end": "2021-08-05T18:48:45.289Z",
+    "duration": 11795,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "cff3cc11-5445-4521-9a50-89b69c55b50d",
+      "title": "",
+      "fullFile": "cypress/integration/com.techproed/day06_01_viewport.js",
+      "file": "cypress/integration/com.techproed/day06_01_viewport.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "7ad85170-7924-446a-afb0-f207ca266891",
+          "title": "view ports",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "iphone8",
+              "fullTitle": "view ports iphone8",
+              "timedOut": null,
+              "duration": 3464,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://www.amazon.com/\");\ncy.viewport(\"iphone-8\");\ncy.screenshot;",
+              "err": {},
+              "uuid": "3e46d1d1-ba56-4fa3-aaed-486326b0dcd8",
+              "parentUUID": "7ad85170-7924-446a-afb0-f207ca266891",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "imac",
+              "fullTitle": "view ports imac",
+              "timedOut": null,
+              "duration": 3805,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://www.amazon.com/\");\ncy.viewport(\"macbook-16\");\ncy.screenshot;",
+              "err": {},
+              "uuid": "2623b047-2ff5-4638-9511-74ac8ab82366",
+              "parentUUID": "7ad85170-7924-446a-afb0-f207ca266891",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "custom",
+              "fullTitle": "view ports custom",
+              "timedOut": null,
+              "duration": 1878,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://www.amazon.com/\");\ncy.viewport(2500, 1500);\ncy.screenshot;",
+              "err": {},
+              "uuid": "8dbc6dc7-afd3-47b6-be73-7f0654bdd5d9",
+              "parentUUID": "7ad85170-7924-446a-afb0-f207ca266891",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "3e46d1d1-ba56-4fa3-aaed-486326b0dcd8",
+            "2623b047-2ff5-4638-9511-74ac8ab82366",
+            "8dbc6dc7-afd3-47b6-be73-7f0654bdd5d9"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 9147,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

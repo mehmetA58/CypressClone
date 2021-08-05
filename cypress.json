@@ -2,15 +2,19 @@
   "chromeWebSecurity": false,
   "firefoxWebSecurity": false,
   "projectId": "fo5tgr",
-   "reporter": "mochawesome",
-    "reporterOptions": {
-      "reportDir": "cypress/reports",
-      "reportFilename": "report",
-      "overwrite": false,
-      "html": true,
-      "json": true,
-      "charts": true
-    },
-    "video": false
-}
+  "reporter": "mochawesome",
+  "reporterOptions": {
+    "reportDir": "cypress/reports",
+    "reportFilename": "report",
+    "overwrite": false,
+    "html": true,
+    "json": true,
+    "charts": true
+  },
+  "video": false,
+  "retries": {
+    "runMode": 2,
+    "openMode": 0
+  }
 
+}

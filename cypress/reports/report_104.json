@@ -1,0 +1,127 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 1,
+    "failures": -1,
+    "start": "2021-08-05T19:11:33.143Z",
+    "end": "2021-08-05T19:11:38.504Z",
+    "duration": 5361,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 50,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 1,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "77c6d1af-fd2a-45da-87a6-03cfb6c9724a",
+      "title": "",
+      "fullFile": "cypress/integration/com.techproed/day02_04_loginTest.js",
+      "file": "cypress/integration/com.techproed/day02_04_loginTest.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "863a81ad-0eb2-4fde-8d0b-2c00f0770437",
+          "title": "Login",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login negatif",
+              "fullTitle": "Login Login negatif",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "",
+              "err": {},
+              "uuid": "78d9342a-d162-425f-bc49-565e26b1d28d",
+              "parentUUID": "863a81ad-0eb2-4fde-8d0b-2c00f0770437",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login pozitif",
+              "fullTitle": "Login Login pozitif",
+              "timedOut": null,
+              "duration": 3142,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://test.iyikisordun.com/login.php\");\ncy.get('[type=\"email\"]').type(email);\ncy.get('[type=\"password\"]').type(psw);\ncy.get(\".btn\").click();",
+              "err": {},
+              "uuid": "1a2be823-a1c9-4bc9-9217-cde3b25e8347",
+              "parentUUID": "863a81ad-0eb2-4fde-8d0b-2c00f0770437",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1a2be823-a1c9-4bc9-9217-cde3b25e8347"
+          ],
+          "failures": [],
+          "pending": [
+            "78d9342a-d162-425f-bc49-565e26b1d28d"
+          ],
+          "skipped": [],
+          "duration": 3142,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

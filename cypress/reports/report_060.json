@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-05T18:46:01.156Z",
+    "end": "2021-08-05T18:46:13.107Z",
+    "duration": 11951,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "2f42211c-8eda-4085-96a3-f8db76b7b0cb",
+      "title": "",
+      "fullFile": "cypress/integration/com.techproed/day02_01_koalaResort.js",
+      "file": "cypress/integration/com.techproed/day02_01_koalaResort.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3a594cd4-4391-4e4e-b56c-503c4bfce441",
+          "title": "Koala Resort Hotel",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test 1",
+              "fullTitle": "Koala Resort Hotel Test 1",
+              "timedOut": null,
+              "duration": 10168,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://qa-environment.koalaresorthotels.com/\");\ncy.contains(\"Log in\").click(); //??Assertion\n//*1.yol: include (url)\ncy.url().should(\"include\", \"Account/Logon\"); //url \"Account/Logon\" iceriyor mu\n//*2.yol: have.text (metin kutusu)\ncy.get(\"#navLogon > .nav-link\").should(\"have.text\", \"Log in\"); //Login buton locator inda Log in text i yaziyor mu\n//*3.yol:be.visible\ncy.get(\".row > .mb-4\").should(\"be.visible\"); //Sayfadaki username ve password ustundeki Log in locator inda text var mi veya gorunur mu\n//*4.yol: eq\ncy.title().should(\"eq\", \"KoalaResortHotels - Log in\"); //sayfanin title i KoalaResortHotels - Log in  e esit mi\n//*5.yol: include.text\ncy.get(\".row > .mb-4\").should(\"include.text\", \"Log in\"); //locate edilen yerde 'Log in' text olarak var mi\n//??burada include ve have ayni sonucu verir\n//url => include   text => include or have.text",
+              "err": {},
+              "uuid": "b73df540-578d-4749-9851-67b16da02228",
+              "parentUUID": "3a594cd4-4391-4e4e-b56c-503c4bfce441",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "b73df540-578d-4749-9851-67b16da02228"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 10168,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}

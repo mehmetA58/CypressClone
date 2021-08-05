@@ -1,0 +1,111 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2021-08-05T18:48:21.264Z",
+    "end": "2021-08-05T18:48:31.582Z",
+    "duration": 10318,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b014f983-34b2-4878-a324-2bc2acd3bbef",
+      "title": "",
+      "fullFile": "cypress/integration/com.techproed/day05_03_fileUpload.js",
+      "file": "cypress/integration/com.techproed/day05_03_fileUpload.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "08186c79-5078-42a1-9474-708acdded2ee",
+          "title": "file upload",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "override fileName",
+              "fullTitle": "file upload override fileName",
+              "timedOut": null,
+              "duration": 7558,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"https://davidwalsh.name/demo/multiple-file-upload.php\");\nconst path1 = \"image01.jpeg\"; // cy.get(\"#filesToUpload\").attachFile({filePath: path1, fileName: \"image02.jpeg\" });\ncy.get(\"#filesToUpload\").attachFile({\n  filePath: path1,\n  fileName: \"deneme.pdf\"\n}); //Assertion\n//1.yol\ncy.contains(\"image.jpeg\").should(\"be.visible\"); //2.yol\ncy.get(\"#fileList > li\").contains(\"image0.jpeg\").should(\"be.visible\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'image.jpeg' but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'image.jpeg' but never did.\n    at Context.eval (https://davidwalsh.name/__cypress/tests?p=cypress\\integration\\com.techproed\\day05_03_fileUpload.js:145:31)",
+                "diff": null
+              },
+              "uuid": "55cf3527-fbc1-44c7-9682-50ebdeb1aff1",
+              "parentUUID": "08186c79-5078-42a1-9474-708acdded2ee",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "55cf3527-fbc1-44c7-9682-50ebdeb1aff1"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 7558,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "overwrite": false,
+        "html": true,
+        "json": true,
+        "charts": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
