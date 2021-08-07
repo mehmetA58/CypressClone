@@ -1,6 +1,6 @@
 describe("custom method", () => {
   it.skip("login", () => {
-    cy.login("123murat123@gmail.com", "123murat123");
+   cy.login("123murat123@gmail.com", "123murat123"); 
     //*login ->support klasorunde commands.js de tanimlanan method
     //commands.js de tanimlandigi icin framework un her yerinden ulasabiliriz
   });
